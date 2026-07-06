@@ -1,0 +1,39 @@
+[0:00 — HOOK]
+Hello everyone. Smartphone notifications and algorithmic feeds are constantly competing for our attention, making it harder than ever to stay focused on what truly matters. Attention Span Recorder is designed to help students and professionals build better digital habits through intelligent AI coaching, distraction analysis, and gamified motivation.
+
+[0:20 — WHAT IT IS]
+Attention Span Recorder is a secure multi-agent assistant built for the "Agents for Good" capstone track. Using the Google ADK 2.0 Workflow API, the system logs work intervals, monitors screen time on distracting applications, and awards coins and experience points for completing focus sessions.
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see on the banner, Attention Span Recorder combines automated focus tracking, a motivational reward store, and automated security controls into a sleek, premium interface.
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's walk through the architecture of the system. 
+First, when a user enters a query, it passes through the Security Checkpoint node which scrubs PII, blocks prompt injections, and logs audit metrics.
+If passed, the query goes to the Orchestrator node, which coordinates between our specialized Distraction Analyst and Gamification Coach sub-agents.
+For actions like redeeming hard-earned focus coins, the flow routes to the Human-in-the-Loop approval node, which pauses execution to confirm the transaction.
+Finally, the terminal node formats the response and appends our simulated Productivity Dashboard.
+(pause)
+Additionally, both specialized sub-agents are equipped with an MCP Toolset, allowing them to access external distraction definitions, study logs, and coaching tips locally.
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+Let me show you how this works in practice.
+I will enter our first test case: "Log a completed focus session of 30 minutes".
+(pause)
+As expected, the orchestrator delegates this task to the distraction analyst agent, which runs the local tool to award us 60 coins and 150 XP. You can see our dashboard has instantly leveled up!
+Next, let's test what happens when a distraction occurs. I'll enter: "I spent 15 minutes scrolling YouTube".
+(pause)
+The distraction agent calls the MCP tool, flags YouTube as an active distraction, warns us, and resets our session streak to 0.
+Finally, let's try redeeming a reward. I'll enter: "I want to redeem my coins for a Bronze Focus Badge".
+(pause)
+Notice how the execution pauses and prompts me directly in the interface to approve the transaction. If I type "yes" and submit, the workflow resumes, deducts 50 coins, and adds the badge to my collection.
+
+[3:00 — SECURITY & MCP]
+Under the hood, our security node keeps user data safe by redacting emails and SSNs and logging detailed JSON audit logs at INFO, WARNING, and CRITICAL severities. 
+The system also runs a local stdio MCP server, separating the core agent coordination from our local tool implementations.
+
+[3:30 — IMPACT / CLOSE]
+By combining stateful workflows, specialized sub-agent delegation, and human validation safeguards, Attention Span Recorder turns digital discipline into a rewarding habit. Thank you, and I look previewing this live with you.
