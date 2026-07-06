@@ -26,11 +26,11 @@ graph TD
 
 ## 3. Concepts & File References
 
-*   **ADK Workflow**: Coordinates execution logic and handles state propagation across nodes. Ref: [app/agent.py](file:///c:/Users/himan/OneDrive/Desktop/antigravity/Capstone%20Project%202026/attention-span-recorder/app/agent.py#L313-L330).
-*   **LlmAgent**: Configures specific instructions for the specialized agents. Ref: [app/agent.py](file:///c:/Users/himan/OneDrive/Desktop/antigravity/Capstone%20Project%202026/attention-span-recorder/app/agent.py#L115-L171).
-*   **AgentTool**: Delegates orchestrator responsibilities to specialized sub-agents. Ref: [app/agent.py](file:///c:/Users/himan/OneDrive/Desktop/antigravity/Capstone%20Project%202026/attention-span-recorder/app/agent.py#L167-L170).
-*   **MCP Server (Model Context Protocol)**: Exposes local python tools via stdio transport. Ref: [app/mcp_server.py](file:///c:/Users/himan/OneDrive/Desktop/antigravity/Capstone%20Project%202026/attention-span-recorder/app/mcp_server.py).
-*   **Security Checkpoint**: Intercepts inputs to scrub sensitive data, block prompt injections, and audit decisions. Ref: [app/agent.py](file:///c:/Users/himan/OneDrive/Desktop/antigravity/Capstone%20Project%202026/attention-span-recorder/app/agent.py#L173-L229).
+*   **ADK Workflow**: Coordinates execution logic and handles state propagation across nodes. Ref: [app/agent.py](app/agent.py#L313-L330).
+*   **LlmAgent**: Configures specific instructions for the specialized agents. Ref: [app/agent.py](app/agent.py#L115-L171).
+*   **AgentTool**: Delegates orchestrator responsibilities to specialized sub-agents. Ref: [app/agent.py](app/agent.py#L167-L170).
+*   **MCP Server (Model Context Protocol)**: Exposes local python tools via stdio transport. Ref: [app/mcp_server.py](app/mcp_server.py).
+*   **Security Checkpoint**: Intercepts inputs to scrub sensitive data, block prompt injections, and audit decisions. Ref: [app/agent.py](app/agent.py#L173-L229).
 *   **Agents CLI**: Provided environment scaffolding and interactive developer playground capabilities.
 
 ---
